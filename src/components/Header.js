@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header-content">
-        <img src="/assets/logo.png" alt="MSAQE Logo" className="logo" />
+        <img src={`${process.env.PUBLIC_URL}/assets/logo.png`} alt="MSAQE Logo" className="logo" />
         <div className="header-text">
           <p className="lab-info">复旦大学多媒体智能安全实验室MAS</p>
           <h1>MSAQE: 基于AI的景区质量评估</h1>

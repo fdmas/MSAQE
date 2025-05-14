@@ -72,8 +72,9 @@ export async function loadScenicData() {
   try {
     const response = await fetch('/8.final_summary_scores_aligned_to_rank_3.csv');
     if (!response.ok) {
-      console.error(`HTTP error! status: ${'${response.status}'} when fetching CSV.`);
-      throw new Error(`HTTP error! status: ${'${response.status}'}`);
+      const errorMsg = 'HTTP error! status: ' + response.status + ' when fetching CSV.';
+      console.error(errorMsg);
+      throw new Error('HTTP error! status: ' + response.status);
     }
     const csvText = await response.text();
     const csvData = parseCSV(csvText);
