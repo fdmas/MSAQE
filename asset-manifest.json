@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/MSAQE/static/css/main.7016df45.css",
-    "main.js": "/MSAQE/static/js/main.de50060b.js",
+    "main.js": "/MSAQE/static/js/main.bc262b98.js",
     "index.html": "/MSAQE/index.html",
     "main.7016df45.css.map": "/MSAQE/static/css/main.7016df45.css.map",
-    "main.de50060b.js.map": "/MSAQE/static/js/main.de50060b.js.map"
+    "main.bc262b98.js.map": "/MSAQE/static/js/main.bc262b98.js.map"
   },
   "entrypoints": [
     "static/css/main.7016df45.css",
-    "static/js/main.de50060b.js"
+    "static/js/main.bc262b98.js"
   ]
 }
