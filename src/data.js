@@ -70,7 +70,7 @@ function calculateDimensionRanks(areas) {
 
 export async function loadScenicData() {
   try {
-    const response = await fetch('/8.final_summary_scores_aligned_to_rank_3.csv');
+    const response = await fetch('https://raw.githubusercontent.com/fdmas/MSAQE/gh-pages/8.final_summary_scores_aligned_to_rank_3.csv');
     if (!response.ok) {
       const errorMsg = 'HTTP error! status: ' + response.status + ' when fetching CSV.';
       console.error(errorMsg);
