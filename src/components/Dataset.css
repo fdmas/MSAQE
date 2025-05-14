@@ -1,0 +1,58 @@
+.dataset {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.dataset h2 {
+  color: #4285F4;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 1rem;
+}
+
+.dataset p {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.dimensions-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.dimensions-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+.dimension-code {
+  font-weight: bold;
+  color: #4285F4;
+  min-width: 40px;
+}
+
+.dimension-name {
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .dataset {
+    margin: 1.5rem auto;
+  }
+
+  .dimensions-list {
+    grid-template-columns: 1fr;
+  }
+} 

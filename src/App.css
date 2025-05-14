@@ -1,0 +1,33 @@
+.app {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+main {
+  padding: 7rem 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+main > section {
+  margin-bottom: 3rem;
+}
+
+/* 为Header组件添加足够的上边距 */
+header.header {
+  margin-top: 4rem;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 6rem 1rem 1rem;
+  }
+  
+  main > section {
+    margin-bottom: 2rem;
+  }
+  
+  header.header {
+    margin-top: 3.5rem;
+  }
+} 
