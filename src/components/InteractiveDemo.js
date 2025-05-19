@@ -143,7 +143,7 @@ const InteractiveDemo = () => {
 
   if (error) { // Show error prominently if fetching failed
     return <div className="error-container"><p>{error}</p></div>;
-  }
+    }
 
   if (allScenicData.scenicAreas.length === 0) {
     return <div className="error-container"><p>没有景区数据可显示。请确保CSV文件已正确放置在public目录并包含有效数据。</p></div>;
@@ -177,12 +177,12 @@ const InteractiveDemo = () => {
       </div>
 
       {currentSelectedArea && (
-        <div className="scenic-area-details">
-          <div className="scenic-area-header">
+      <div className="scenic-area-details">
+        <div className="scenic-area-header">
             <img src={currentSelectedArea.image} alt={currentSelectedArea.name} className="scenic-area-image" />
-            <div className="scenic-area-info">
+          <div className="scenic-area-info">
               <h3>{currentSelectedArea.name}</h3>
-              <div className="scenic-area-level">
+            <div className="scenic-area-level">
                 <span className="category-badge">{currentSelectedArea.category}</span> 
                 <span className="rank-badge">总体评分: {currentSelectedArea.rank}</span>
               </div>
@@ -191,10 +191,10 @@ const InteractiveDemo = () => {
           <div className="chart-container" style={{ height: '400px' }}> 
             {currentSelectedArea.scores ? <Radar data={chartData} options={chartOptions} /> : <p>该景区评分数据暂无。</p>}
           </div>
-          <div className="dimension-ranks">
+        <div className="dimension-ranks">
             <h4>各维度排名 (仅显示前10名)</h4>
             {currentSelectedArea.dimensionRanks ? (
-              <div className="ranks-grid">
+          <div className="ranks-grid">
                 {scoreKeys.map(key => {
                   const rank = currentSelectedArea.dimensionRanks[key];
                   const rankDisplay = (typeof rank === 'number' && rank <= 10) ? `第 ${rank} 名` : '—';
@@ -202,10 +202,10 @@ const InteractiveDemo = () => {
                     <div className="rank-item" key={key}>
                       <span className="dimension-label">{dimensionLabels[key] || key}</span>
                       <span className="rank-value">{rankDisplay}</span>
-                    </div>
+            </div>
                   );
                 })}
-              </div>
+            </div>
             ) : <p>该景区各维度排名数据暂无。</p>}
           </div>
         </div>

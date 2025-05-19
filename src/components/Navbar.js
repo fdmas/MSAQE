@@ -32,7 +32,7 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         <div className="navbar-logo">
-          <img src="/assets/logo.png" alt="MSAQE Logo" />
+          <img src={(process.env.NODE_ENV === 'production' ? '/MSAQE' : '') + '/assets/logo.png'} alt="MSAQE Logo" />
           <span>MSAQE</span>
         </div>
         

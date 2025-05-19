@@ -8,7 +8,7 @@ const Contact = () => {
       <p>
         如需更多信息或申请访问MSAQE系统，
         请联系我们：{' '}
-        <a href="mailto:msaqe@fudan.edu.cn">msaqe@fudan.edu.cn</a>
+        <a href="mailto:yjwang22@m.fudan.edu.cn">yjwang22@m.fudan.edu.cn</a>
       </p>
     </section>
   );

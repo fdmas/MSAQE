@@ -70,7 +70,7 @@ function calculateDimensionRanks(areas) {
 
 export async function loadScenicData() {
   try {
-    const response = await fetch('https://raw.githubusercontent.com/fdmas/MSAQE/gh-pages/8.final_summary_scores_aligned_to_rank_3.csv');
+    const response = await fetch(`${process.env.PUBLIC_URL}/8.final_summary_scores_aligned_to_rank_3.csv`);
     if (!response.ok) {
       const errorMsg = 'HTTP error! status: ' + response.status + ' when fetching CSV.';
       console.error(errorMsg);
@@ -87,7 +87,6 @@ export async function loadScenicData() {
     let scenicAreasFromCSV = csvData.map((row, index) => {
       const name = row.scenic_name; 
       const predefined = predefinedImageData[name] || {};
-      // Assumes your CSV has a column named "Category"
       const categoryFromCSV = row.Category ? row.Category.trim() : defaultCategoryNameFromCode;
 
       const getScore = (value) => {
@@ -109,11 +108,14 @@ export async function loadScenicData() {
       const hasInvalidScore = Object.values(scores).some(s => s === "数据暂无");
       const overallRank = parseFloat(row.Rank);
 
+      // 优先使用CSV中的图片URL，如果没有则使用预定义的图片，最后使用默认图片
+      const imageUrl = row.image_url || predefined.image || defaultImage;
+
       return {
         id: index + 1, 
         name: name || "未知景区",
-        category: categoryFromCSV, // Category from CSV
-        image: predefined.image || defaultImage,
+        category: categoryFromCSV,
+        image: imageUrl,
         rank: !isNaN(overallRank) && !hasInvalidScore ? overallRank : "数据暂无",
         scores: scores, 
         dimensionRanks: {} 
