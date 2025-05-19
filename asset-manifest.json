@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/MSAQE/static/css/main.7016df45.css",
-    "main.js": "/MSAQE/static/js/main.988b6588.js",
+    "main.css": "/MSAQE/static/css/main.335fe776.css",
+    "main.js": "/MSAQE/static/js/main.503cc735.js",
     "index.html": "/MSAQE/index.html",
-    "main.7016df45.css.map": "/MSAQE/static/css/main.7016df45.css.map",
-    "main.988b6588.js.map": "/MSAQE/static/js/main.988b6588.js.map"
+    "main.335fe776.css.map": "/MSAQE/static/css/main.335fe776.css.map",
+    "main.503cc735.js.map": "/MSAQE/static/js/main.503cc735.js.map"
   },
   "entrypoints": [
-    "static/css/main.7016df45.css",
-    "static/js/main.988b6588.js"
+    "static/css/main.335fe776.css",
+    "static/js/main.503cc735.js"
   ]
 }
